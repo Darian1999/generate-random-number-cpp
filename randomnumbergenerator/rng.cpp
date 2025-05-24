@@ -1,5 +1,6 @@
 //
 // Created by Admin on 5/21/2025.
+// Latest update on 5/23/2025.
 //
 #include "rng.h"
 
@@ -29,5 +30,13 @@ int rng::getRandomNumber() {
 void rng::setRandomNumber() {
     randomNumber = newRandomNumber;
 }
+
+void rng::generateRandomNumberWithoutrandomSeed(){
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> distribution(1,4755);
+    randomNumber = distribution(gen);
+}
+
 
 
