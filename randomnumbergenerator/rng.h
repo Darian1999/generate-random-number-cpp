@@ -18,6 +18,7 @@ public:
     void generateRandomNumber(int randomSeed);
     int getRandomNumber();
     void setRandomNumber();
+    void generateRandomNumberWithoutrandomSeed();
 };
 
 #endif //RNG_H
